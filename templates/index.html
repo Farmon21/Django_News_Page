@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <section class="section">
+        <div class="container">
+            <h1 class="is-size-3">Yangiliklar</h1><br>
+            <figure class="img">
+                <img src="{% static 'images/krug.png' %}" alt="">
+            </figure><br>
+            <h1 class=" is-size-3">INNO Innovatsion o‘quv va ishlab chiqarish texnoparki binosiga press-tur tashkil etildi</h1><br> 
+            <p>25 oktabr kuni Innovatsion rivojlanish vazirligi tomonidan INNO Innovatsion o‘quv va ishlab chiqarish texnoparki binosiga jurnalistlar, blogerlar va OAV vakillari uchun press-tur tashkil etildi. Texnopark Toshkent shahri, Olmazor tumani, Talabalar shaharchasida barpo etilgan bo‘lib, unga 1,94 gektar yer maydoni ajratilgan. Binoning umumiy maydoni 10 ming 994 m2 tashkil etadi. Loyiha doirasida 3 qavatdan iborat innovatsion o‘quv-ilmiy markazi binosi (10 ming 994 kv. m.) va yopiq issiqxona (496 kv. m.) qurildi. – Innovatsion g‘oyalar yoshlarga xosligi statistik ma’lumotlardan ayon, – deydi Innovatsion rivojlanish vazirligi huzuridagi Innovatsiyalar Milliy ofis bosh direktor o‘rinbosari Akbarxon Texnoparkning asosiy binosi monolitdan, hamda tashqi devorlari gazoblokdan qurilgan. Tashqi devorlarida isitish va gidroizolyatsiya ishlari bajarilgan, barcha metall karkaslariga yong‘indan himoya qiluvchi bo‘yoqlar bilan ishlov berilgan, energiya tejovchi uskunalar o‘rnatilgan. Binoga yondosh bo‘lgan hududda obodonlashtirish va ko‘kalamzorlashtirish ishlari bajarilgan.</p>
+        </div>
+    </section><br>
+
+
+    <section class="section">
+        <div class="columns">
+            {% for about in abouts %}
+            <div class="column">
+                <div class="card">
+                    <div class="card-image">
+                        <figure class="img">
+                            <img src="{{ about.img.url }}" alt="">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+						<div class="media">
+							<div class="media-content " >
+								<p style="color: black;" class="subtitle">{{ about }}</p>
+							</div>
+						</div>
+
+						<div class="content">
+							{{ about.descriptions }}
+						</div>
+                        <div class="columns">
+                            <div class="column">
+                                <a href="{% url 'about_detail' about.pk %}" style="border:1px solid #2F3A4E;" class="button is-outlined">Batafsil</a>
+                            </div>
+                            <div class="column is-size-7">
+                                {{ about.date_added }}
+                            </div>
+                        </div>
+					</div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <br>
+    <div class="has-text-centered">
+        <button class="button" style="background-color: #2F3A4E; color: white;">
+            <i class="fa-solid fa-arrows-rotate pr-3"></i>
+            Ko'proq Ko'rish
+        </button>
+    </div><br>
+
+{% endblock content %}

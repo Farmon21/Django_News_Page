@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %} <br><br>
+      
+
+    <div class="columns">
+        <div class="column is-2"></div>
+        <div class="column box">
+                <figure class="img">
+                    <img src="{{ about.img.url }}" alt="" class="image is-centered"
+                    style="min-width: 100%; border-radius: 5px" height="40%">
+                </figure>
+         
+                <h1 class="is-size-6 has-text-dark has-text-justified my-6" >{{ about }}</h1>
+                <h2 class="is-size-6 has-text-dark has-text-justified my-6">{{ about.descriptions }}</h2>
+            </div>
+        <div class="column is-2"></div>
+    </div> <br><br>
+
+
+        <div class="title is-size-4" style="margin-left: 140px;">Biz Bilan Bog'laning</div><br><br>
+    <section class="section" style="background-color: #F9F9F9;">
+        <div class="columns">
+            <div class="column">
+               <h1 class="title is-size-4 ml-6 pl-6">Manzil</h1> 
+                <h1 class="subtitle is-size-6 ml-6 pl-6 pt-2">Toshkent shahri, Olmazor tumani, <br> Talabalar shaharchasi</h1>
+           <br>     <h1 class="title is-size-4 ml-6 pl-6">Telefon raqam</h1>
+           <h1 class="subtitle is-size-6 ml-6 pl-6 pt-2">+99871 203 32 00</h1><br>
+           <h1 class="title is-size-4 ml-6 pl-6">Email</h1> 
+           <h1 class="subtitle is-size-6 ml-6 pl-6 pt-2">info@innotechnopark.com</h1><br>
+            </div>
+            <div class="column">
+                <img src="{% static 'images/xarita.png' %}" alt="">
+            </div>
+        </div>
+    </section>
+
+
+
+        
+{% endblock content %}  

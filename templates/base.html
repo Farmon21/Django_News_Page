@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css" integrity="sha512-HqxHUkJM0SYcbvxUw5P60SzdOTy/QVwA1JJrvaXJv4q7lmbDZCmZaqz01UPOaQveoxfYRv1tHozWGPMcuTBuvQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <section style="background-color: #2F3A4E;">
+        <nav class="level container">
+            <div class="level-left pl-6">
+                <level class="level-item">
+                    <a href="{% url 'home' %}"><img src="/static/images/logo.png" alt="" width="100"></a>
+                </level>
+            </div>
+    
+            <div class="level-right  py-4 px-6">
+                <p class="level-item is-size-6 mx-3"><a href="{% url 'home' %}" style="color: #fff;">Bosh sahifa</a></p>
+                <p class="level-item is-size-6 mx-3"><a style="color: #fff;">Yangiliklar</a></p>
+                <p class="level-item is-size-6 mx-3"><a style="color: #fff;"> Xizmatlar</a></p>
+                <p class="level-item is-size-6 mx-3"><a style="color: #fff;">Tanlovlar</a></p>
+                <p class="level-item is-size-6 mx-3"><a style="color: #fff;">Biz haqimizda</a></p>
+                <p class="level-item is-size-6 mx-3"><a style="color: #fff;">Aloqa</a></p>
+                <p class="level-item is-size-6 mx-3 ml-6"><a style="color: #fff; background-color: #2F3A4E;" class="button is-size-6"><i class="fa-solid fa-user pr-2"></i> Ro'yxatdan o'tish</a></p>
+            </div>
+        </nav>
+    </section>
+    
+    <div class="container">
+        {% block content %}
+
+        {% endblock content %}
+    </div>
+    <section class="section" style="background-color: #2F3A4E;">
+        <div class="columns">
+            <div class="column">
+                <img class="ml-6" src="{% static 'images/logo.png' %}" alt="" width="100"><br>
+                <p class="is-size-7 " style="color: white;">Bizni ijtimoiy tarmoqlarda kuzating</p>
+                <i class="fa-brands fa-instagram pt-4" style="color: white;" ></i>
+                <i class="fa-brands fa-telegram mx-4" style="color: white;"></i>
+                <i class="fa-brands fa-facebook" style="color:white;"></i>
+            </div>
+            <div class="column">
+                <a href=""><p class="subtitle is-size-6 py-2" style="color: white;">Foydali havolalar</p></a>
+                <a href=""><p class="subtitle is-size-7" style="color: white;">Innovatsion Rivojlanish Vazirligi</p></a>
+                <a href=""><p class="subtitle is-size-7 py-2" style="color: white;">Innovatsion Milliy Ofisi</p></a>
+                <a href=""><p class="subtitle is-size-7 py-2" style="color: white;">Innoweek</p></a>
+                <a href=""><p class="subtitle is-size-7" style="color: white;">Technoways</p></a>
+             
+            </div>
+            <div class="column">
+                <h1 class="is-size-5" style="color: white;">Manzilimiz</h1>
+                <p style="color: white;">Toshkent shahri, Olmazor tumani,<br> Talabalar shaharchasi</p>
+                <p style="color: white;">+99871 203 32 00</p>
+                <p style="color: white;">info@innotechnopark.com</p>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
